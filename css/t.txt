@@ -1,0 +1,276 @@
+.header .fa-solid{
+    display: flex;
+    margin-top: 1rem;
+}
+.header img {
+    width:20rem ;
+    height: 5rem;
+    display: flex;
+}
+
+--------------
+html 
+------------
+navbar &  header
+-------------
+   <!-- herder section start -->
+    <header class="header">
+        <a href="#" class="logo"><img src="images/ofast8.png" alt=""></a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#services">services</a>
+            <a href="#about">about</a>
+            <a href="#features">features</a>
+            <a href="#pricing">pricing</a>
+            <a href="#review">review</a>
+            <a href="#FAQ">FAQ</a>
+        </nav>
+
+        <div id="menu-btn" class="fa fa-bars"></div>
+        <a href="#" class="btn">join us</a>
+
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+    <section class="home" id="home">
+        <div class="image">
+            <img src="images/home1.png" alt="home image">
+        </div>
+
+        <div class="content">
+            <h3><span class="line-down">welcome</span> to the best subscription platform</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates doloribus animi officia nemo rem eaque adipisci magni quas. Est aliquam obcaecati exercitationem inventore eius, ratione distinctio omnis odit natus neque voluptas vero harum necessitatibus eum nam ut, at tempora.</p>
+            <a href="#" class="btn">login</a>
+        </div>
+    </section>
+    <!-- home section ends -->
+
+
+
+
+
+
+-----------------
+css
+------------
+
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+html{
+    font-size: 52.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+html::-webkit-scrollbar{
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track{
+    background: #fff;
+}
+html::-webkit-scrollbar-thumb{
+    background: #0d4571;
+    border-radius: 1rem;
+}
+section{
+    padding: 5rem 9%;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.heading span{
+    font-size: 2.5rem;
+}
+.heading h1{
+    font-size: 4rem;
+    padding-top: .5rem;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    color: #fff;
+    background: linear-gradient(135deg, #0d4571, #0376c6);
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: .75rem;
+}
+.btn:hover{
+    background: linear-gradient(135deg, #0376c6, #0d4571);
+}
+.line-down{
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+}
+.line-down::before{
+    content: "";
+    position: absolute;
+    bottom: .7rem;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #0f95e8;
+    z-index: -1;
+    -webkit-clip-path:polygon(0 85%, 100% 75%, 100% 100%, 0% 100%);
+    clip-path:polygon(0 85%, 100% 75%, 100% 100%, 0% 100%);
+}
+@-webkit-keyframes fadeUp{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(4rem);
+        transform: translateY(4rem);
+    }
+}
+@-keyframes fadeUp{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(4rem);
+        transform: translateY(4rem);
+    }
+}
+
+/* header */
+.header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background:#f0f8ff ;
+    -webkit-box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    padding: 2rem 9%;
+}
+.header .logo{
+    font-size: 2.5rem;
+    color: #0d4571;
+}
+.header img {
+    width:22rem ;
+    height: 5rem;
+    display: flex;
+}
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #0d4571;
+    transition: 0.3s ease-in-out;
+}
+.header .navbar a:hover{
+    background: #e0f0fe;
+    color: #000;
+    font-weight: 500;
+    padding: 0.3rem;
+    border-radius: .3rem;
+}
+.header .btn{
+    margin-top: 0;
+}
+#menu-btn{
+    cursor: pointer;
+    font-size: 3rem;
+    display: none;
+}
+
+/* header ends */
+
+/* home start */
+@-webkit-keyframes floating{
+    0%, 100%{
+        -webkit-transform: translateY(0rem);
+        transform: translateY(0rem);
+    }
+    50%{
+        -webkit-transform: translateY(0rem);
+        transform: translateY(0rem);
+    }
+}
+@keyframes floating{
+    0%, 100%{
+        -webkit-transform: translateY(0rem);
+        transform: translateY(0rem);
+    }
+    50%{
+        -webkit-transform: translateY(0rem);
+        transform: translateY(0rem);
+    }
+}
+/* home ends */
+.home{
+    min-height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkikt-box-align:center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap:wrap ;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: #bae1fd;
+}
+.home .image{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 42rem;
+    flex: 1 1 42rem;
+    margin-top: 5rem;
+}
+.home .image img{
+    width: 100%;
+    -webkit-animation: floating 4s linear infinite;
+    animation: floating 4s linear infinite;
+}
+.home .content{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 42rem;
+    flex: 1 1 42rem;
+}
+.home .content h3{
+    font-size: 6rem;
+    color: #07304f;
+}
+.home .content p{
+    font-size: 2rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: #3d496b;
+}
+
+
+
+
+background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+
+
+    text-align: center;
+    justify-content: center;
+    margin-left: 100px;
+    display: flex;
+    color: #692e25;
