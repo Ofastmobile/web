@@ -1,9 +1,9 @@
 let menu = document.querySelector("#menu-btn");
 let navbar = document.querySelector(".header .navbar");
 
-menu.oneclick = () =>{
+menu.onclick = () => {
     menu.classList.toggle('fa-times');
-    menu.classList.toggle('active');
+    navbar.classList.toggle('active');
 }
 
 window.onscroll = () => {
@@ -11,34 +11,34 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
-let year = document.querySelector('.pricing .price-toggle .year');
-let month = document.querySelector('.pricing .price-toggle .month');
-let yearAmount = document.querySelectorAll('.pricing .price .month');
-let monthAmount = document.querySelectorAll('.pricing .price .month');
+let year = document.querySelector('.pricing .price-toggler .year');
+let month = document.querySelector(".pricing .price-toggler .month");
+let yearAmount = document.querySelectorAll(".pricing .price .year");
+let monthAmount = document.querySelectorAll(".pricing .price .month");
 
-year.oneclick = () => {
+year.onclick = () => {
     year.classList.add('active');
     month.classList.remove('active');
-    yearAmount.forEach(year =>{
+    yearAmount.forEach(years => {
         years.style.display = 'block';
-    })
-    monthAmount.forEach(month => {
-        month.style.display = 'none';
-    })
+    });
+    monthAmount.forEach(months => {
+        months.style.display = 'none'
+    });
 }
 
-year.oneclick = () => {
+month.onclick = () => {
     year.classList.remove('active');
     month.classList.add('active');
-    yearAmount.forEach(year =>{
+    yearAmount.forEach(years => {
         years.style.display = 'none';
-    })
-    monthAmount.forEach(month => {
-        month.style.display = 'block';
-    })
+    });
+    monthAmount.forEach(months => {
+        months.style.display = 'block'
+    });
 }
 
-let slides = document.querySelectorAll(".reviews .slide-container .slider");
+let slides = document.querySelectorAll(".reviews .slide-container .slide");
 let index = 0;
 
 function next() {
@@ -53,8 +53,8 @@ function prev() {
     slides[index].classList.add("active");
 }
 
-document.querySelectorAll(".faq .accordion-container").forEach(accordion => {
-    accordion.oneclick = () => {
+document.querySelectorAll(".faq .accordion-container .accordion").forEach(accordion => {
+    accordion.onclick = () => {
         accordion.classList.toggle("active");
     }
 })
